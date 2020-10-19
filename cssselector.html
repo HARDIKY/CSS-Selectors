@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selectors and Relationships</title>
+  <link rel="stylesheet" href="selector.css">
+</head>
+  <body>
+    <center>
+    <header style="justify-content: center;">
+      <nav>
+        <ul >
+          <li><a href="#">Home(hover using the : hover property in css)</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <section>
+        <div class="month-list">
+          <ul>
+            <li>
+              <a href="#">January</a>
+                <span class="disabled">My favorite month</span>
+            </li>
+            <li>
+              <a href="#">
+                <span class="active">February</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="disabled">March</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">April</a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="promo">
+                  <span class="disabled">May</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">June</a>
+            </li>
+            <li>
+              <a href="#">July</a>
+            </li>
+            <li>
+              <a href="#">August</a>
+              <span class="disabled">My least favorite month</span>
+            </li>
+            <li>
+              <a href="#" class="disabled">September(this is disabled using the class=disabled</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="grandparent">
+          <div class="parent" style="width: 350px;">
+            <h4>Child of parent</h4>
+            <div>
+              <div>I'm parent red! and coloured red using the css selector (first-of-type)</div>
+              <h4>I'm child  red </h4>
+              <div>I'm Parent blue!</div>
+              <h4>I'm Child blue  and coloured blue using the css selector (last-of-type)</h4>
+            </div>
+          </div>
+          <h4 style="width: 1300px;">This is under a class granparent and rounded using border-radius</h4>
+        </div>
+      </section>
+    </article>
+    <footer class="padded">
+      <div class="disclaimer">
+        Only one purchase per household.
+        <a href="#">
+          <span class="footer-link">
+            <span class="disabled">
+              Privacy Policy(This is a child span under a parent span)
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="promo">
+       This is a div coloured pink by using css selector property class
+      </div>
+      <span>
+          <h4>Below Textboxes are focused using CSS Selector property Focus</h4>
+          <input type="text" name="email"class="focusonme1" placeholder="this has focus red">
+          <input type="text" name="name" class="focusonme2" placeholder="this has no focus">
+          <input type="tel" name="telephone" class="focusonme3" placeholder="this has focus green">
+      </span>
+    </footer>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+body{
+    background-color: rgba(139, 36, 170, 0.329);
+}
+<!-- Nav Bar -->
+header {
+	border: 1px solid red;
+}
+header nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background:  black;
+}
+header nav li {
+	float: left;
+	color: black;
+}
+header nav li:hover {background: rgb(40, 40, 40);}
+header nav li a {
+	display: block;
+	text-decoration: none;
+	padding: 12px 12px;
+	text-align: center;
+	color: white;
+}
+
+.disabled {
+	color: grey;
+}
+a .disabled {
+	color: red;
+}
+.active {
+	color: rgb(25, 0, 255);
+}
+
+.parent div div:first-of-type {
+	color: rgb(255, 0, 0);
+}
+.parent div div:last-of-type {
+	color: blue;
+}
+.parent div h4:first-of-type {
+	background-color: red;
+}
+.parent div h4:last-of-type {
+	background-color: rgb(49, 204, 204);
+}
+.grandparent > h4 {
+	border: 1px solid green;
+	border-radius: 10px;
+}
+.promo {
+	color: rgb(206, 23, 166);
+	font-weight: bold;
+}
+input {
+	line-height: 25px;
+}
+.focusonme1:focus{
+    background:red
+  }
+  .focusonme3:focus{
+    background:green;
+  }
