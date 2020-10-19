@@ -4,3 +4,6 @@
 
 
 ``` IP Experiment Number 2```  - **CSS Selectors , Transitions and Animations**
+
+##### Selector Demo Image
+![](Selectordemo.png)
