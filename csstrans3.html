@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Animations</title>
+ 
+  <style>
+      .basket {
+  width: 80%;
+}
+
+.rectangle {
+  height: 20px;
+}
+
+.ease-out-ball {
+  border: 2px solid var(--white);
+  height: 480px;
+}
+
+.ease-out-ball .ball {
+  position: relative;
+  top: calc(100% - 100px);
+  transition: .2s;
+}
+
+.ease-out-ball:hover .ball {
+  animation-name: bounce-vertical;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.ease-out-ball:active .ball {
+  animation-play-state: paused;
+  background: var(--main-font);
+}
+
+.ease-container {
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+  flex-direction: column;
+  width: 80%;
+}
+
+.ease-container .rectangle {
+  animation-play-state: paused;
+}
+
+.ease-container:hover .rectangle {
+  animation-play-state: running;
+}
+
+.ease-container .rectangle {
+  position: relative;
+  animation-name: bounce-horizontal;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.ease-container:hover .ease {
+  animation-timing-function: ease;
+}
+
+.ease-container:hover .linear {
+  animation-timing-function: linear;
+}
+
+.ease-container:hover .ease-in {
+  animation-timing-function: ease-in;
+}
+
+.ease-container:hover .ease-out {
+  animation-timing-function: ease-out;
+}
+
+.ease-container:hover .ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ease-container:hover .cubic-bezier {
+  animation-timing-function: cubic-bezier(1,-0.71,0,1.85);
+}
+
+@keyframes bounce-vertical {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes bounce-horizontal {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100% - 100px);
+  }
+}
+  </style>
+</head>
+
+<body style="background-color: rgba(166, 45, 202, 0.342);">
+    <center>
+  <div class="main-container">
+    <header>
+      <h1>Welcome to Animations with CSS!</h1>
+      <h2>Made By Hardik Yewale Roll-65</h2>
+      <h3>Place the cursor on the <span class="purple-bg">Words</span></h3>
+    </header>
+    <div class="basket">
+      <div class="ease-out-ball">
+        <div class="ball">click & hold</div>
+      </div>
+      <div class="ease-container">
+        <div class="wrapper">
+          <div class="rectangle ease">ease</div>
+        </div>
+        <div class="wrapper">
+          <div class="rectangle linear">linear</div>
+        </div>
+        <div class="wrapper">
+          <div class="rectangle ease-in">ease-in</div>
+        </div>
+        <div class="wrapper">
+          <div class="rectangle ease-out">ease-out</div>
+        </div>
+        <div class="wrapper">
+          <div class="rectangle ease-in-out">ease-in-out</div>
+        </div>
+        <div class="wrapper">
+          <div class="rectangle cubic-bezier">cubic bezier</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+</body>
+
+</html>

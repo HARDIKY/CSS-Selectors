@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bars and balls</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      background: #233142;
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      margin: 20px;
+    }
+
+    .bar {
+      height: 60%;
+      width: 50px;
+      border: 1px solid white;
+    }
+
+    .orange {
+      border-color: #f95959;
+      animation-name: bigger, ball;
+      animation-duration: 2s, .5s;
+      animation-delay: 0s, 2s;
+      animation-fill-mode: forwards;
+      animation-direction: alternate, alternate;
+      animation-iteration-count: 1, infinite;
+    }
+
+    .yellow {
+      border-color: #facf5a;
+      animation-name: move-left, ball;
+      animation-duration: 1s, .5s;
+      animation-delay: 1s, 2s;
+      animation-fill-mode: forwards;
+      animation-direction: alternate, alternate;
+      animation-iteration-count: 1, infinite;
+    }
+
+    @keyframes bigger {
+      50% {
+        transform: scale(1.3);
+      }
+
+      75% {
+        transform: scale(1.3) translateX(80px);
+        z-index: 100;
+      }
+
+      100% {
+        transform: scale(1) translateX(80px);
+      }
+    }
+
+    @keyframes move-left {
+      100% {
+        transform: translateX(-100px);
+      }
+    }
+    @keyframes ball {
+      100% {
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bar orange"></div>
+  <div class="bar yellow"></div>
+  <div class="bar orange"></div>
+  <div class="bar yellow"></div>
+  <div class="bar orange"></div>
+  <div class="bar yellow"></div>
+</body>
+
+</html>

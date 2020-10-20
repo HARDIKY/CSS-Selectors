@@ -1,0 +1,79 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.basket:hover .ball {
+  animation-name: walk, jump;
+  animation-duration: 2s, .2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear, ease-in-out;
+}
+
+@keyframes walk {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100% - 100px);
+  }
+}
+
+@keyframes jump {
+  to {
+    transform: translateY(-40px) scaleY(.8);
+  }
+}
+
+.basket1:hover .ball1 {
+  animation-name: walk1, jump1;
+  animation-duration: 2s, .2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear, ease-in-out;
+}
+
+@keyframes walk1 {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100% - 100px);
+  }
+}
+
+@keyframes jump1 {
+  to {
+    transform: translateX(-40px) scaleX(.8);
+  }
+}
+    </style>
+</head>
+<body style="background-color: rgba(166, 45, 202, 0.342);">
+    <center>
+<div class="main-container">
+<header>
+  <h1>Animations with CSS!</h1><br>
+  <h1>Name : Hardik Yewale Roll-65</h1><br>
+  <h2>Multi-Animations - Bouncing Words</h2>
+  <h3>Place the cursor on the <span class="purple-bg">rectangle</span></h3>
+</header>
+<br><br>
+<div class="basket">
+  <div class="ball" style="font-size: x-large;border-radius: 10px;">Hardik Coded me for jump</div>
+</div>
+<br><br>
+<div class="basket1">
+  <div class="ball1" style="font-size: x-large;">Hardik Coded me for side ways</div>
+</div>
+</div>
+ </center>
+
+</body>
+</html>
