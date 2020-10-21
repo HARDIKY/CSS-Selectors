@@ -7,3 +7,5 @@
 
 ##### Selector Demo Image
 ![](Selectordemo.png)
+
+##### Transitions Demo GIF
